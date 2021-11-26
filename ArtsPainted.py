@@ -1,7 +1,7 @@
 import random
 from pyrogram import Client, filters
 def datadef():
-    return {"name":"Arts","info":"%vjuh \n%priletel \n%cowsay \n%padayu \n%xuytebe \n%lol","description":"Mini arts"}
+    return {"name":"Arts","help":"%vjuh \n%priletel \n%cowsay \n%padayu \n%xuytebe \n%lol","description":"Mini arts"}
 @Client.on_message(filters.command("vjuh", prefixes="%") & filters.me)
 async def vjux(client, message):
         text = message.text.replace("%vjuh ", "")
