@@ -3,7 +3,9 @@ import time
 from pyrogram.raw import functions
 import asyncio
 import requests
-
+import sys
+def datadef():
+    return {"name":"NicknameMod","info":"on - включение off - выключение","description":"модуль на измену ника"}
 @Client.on_message(filters.command("on", prefixes="%") & filters.me)
 async def on(client, message):
 	fn = message.from_user.first_name
@@ -13,4 +15,5 @@ async def on(client, message):
 async def off(client, message):
 	fn = message.from_user.first_name
 	await client.send(functions.account.UpdateProfile(first_name=fn, last_name="OFF ❌"))
-	await message.delete()	
+	await message.delete()
+	sys.exit()	
