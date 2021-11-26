@@ -5,7 +5,7 @@ import asyncio
 import requests
 import sys
 def datadef():
-    return {"name":"NicknameMod","info":"on - включение off - выключение","description":"модуль на измену ника"}
+    return {"name":"NicknameMod","info":"on, off","description":"модуль на измену ника"}
 @Client.on_message(filters.command("on", prefixes="%") & filters.me)
 async def on(client, message):
 	fn = message.from_user.first_name
